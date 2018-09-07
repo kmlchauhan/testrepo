@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WindowsServicesDeployment>
+<!--
+Notes about Deploy_RBC_CPC_Service_UCD.xml file
+
+Name = Name of the Windows Service
+DomainUserName = Log On Account with domain name to run windows service
+Password = Password of the log on account username
+Executable = Windows Service executable name. Right now it is static. Please modify if changed.
+StartupType = Windows Service startup type. Please provide below Startup Types
+				Manual
+				Automatic
+				Disabled
+SourceProjectName = Source directory of windows services and also configuration files directory
+TargetProjectNAme = destination directory of windows services.
+PhysicalDirectoryPath = Physical location of all windows services.(f:\tierWindowServices-Resiliency)
+ServiceStatus = After installing Service, please provide 
+				"Start" to start the service 
+				"Stop" to stop the service
+-->
+
+    <ServiceToInstall>
+	
+         <Service>
+		    <Name>RBC_CPC_Service</Name>
+			<!--<Install>yes</Install>-->
+			<DomainUserName>@WindowsServiceLogOnAccountName@</DomainUserName>
+			<Password>@WindowsServiceLogOnAccountPassword@</Password>
+			<ExecutableName>RBC_CPC_Service.exe</ExecutableName>
+			<StartupType>@WindowsServiceStartupType@</StartupType>
+			<!--<DeployEnv>@WindowsServiceDeployEnv@</DeployEnv>-->
+			<SourceProjectName>RBC_CPC_Service</SourceProjectName>
+			<TargetProjectName>RBC_CPC_Service</TargetProjectName>
+			<PhysicalDirectoryPath>F:\Develop\AD</PhysicalDirectoryPath>
+			<ServiceStatus>@WindowsServiceStatus@</ServiceStatus>
+         </Service> 
+		 
+    </ServiceToInstall>
+	
+ </WindowsServicesDeployment>

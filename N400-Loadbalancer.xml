@@ -1,0 +1,26 @@
+<InfrastructureDetails>
+
+    	<!-- WARNING:: Please check with production support team before changing these values -->
+	<HealthCheckFilePath>
+		<HTTP>F:\N400_Packages</HTTP>		
+	</HealthCheckFilePath>
+	<HealthCheckFileName>HEALTHCHECK.ASP</HealthCheckFileName>
+	<RenamedHealthCheckFileName>HEALTHCHECK_1.ASP</RenamedHealthCheckFileName>
+    
+	<!-- Optional for now, Original values will be coming from UCD -->
+	
+	<MaintenanceModeONExecutable>"C:\Program Files (x86)\MOM\Tools\MaintMode_ON.EXE"</MaintenanceModeONExecutable> 
+	<MaintenanceModeOFFExecutable>"C:\Program Files (x86)\MOM\Tools\MaintMode_OFF.EXE"</MaintenanceModeOFFExecutable> 
+	<MaintenanceModeTime>60</MaintenanceModeTime> 
+
+    <GCC>
+        <LoadBalancerType>Primary</LoadBalancerType>
+        <ServerList></ServerList>
+    </GCC>
+ 
+    <SCC>
+        <LoadBalancerType>Secondary</LoadBalancerType>
+        <ServerList></ServerList>
+    </SCC>
+	
+ </InfrastructureDetails>
